@@ -34,13 +34,13 @@ function App() {
     <>
       {/* <BrowserRouter> */}
         <Navbar nav="Welcome" home="Helloooooooo" mode={mode} toggleMode={toggleMode} />
-        <Alert sendAlert={alert} />
-        <TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />
 
         <div className="App">
           <header className="App-header">
             <div className="container">
 
+        <Alert sendAlert={alert} />
+        <TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />
 
               {/* <Routes> */}
                 {/* <Route path="/About" element={<About />} /> */}

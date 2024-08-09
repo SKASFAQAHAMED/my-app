@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-import About from "./components/About";
+// import About from "./components/About";
 
 
 function App() {
@@ -32,20 +32,21 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <Navbar nav="Welcome" home="Helloooooooo" mode={mode} toggleMode={toggleMode} />
         <Alert sendAlert={alert} />
+        <TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />
 
         <div className="App">
           <header className="App-header">
             <div className="container">
 
 
-              <Routes>
-                <Route path="/About" element={<About />} />
-                <Route path="/" element={<TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />} />
+              {/* <Routes> */}
+                {/* <Route path="/About" element={<About />} /> */}
+                {/* <Route path="/" element={<TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />} /> */}
 
-              </Routes>
+              {/* </Routes> */}
 
             </div>
 
@@ -57,7 +58,7 @@ function App() {
           </header>
         </div>
 
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </>
   );
 }

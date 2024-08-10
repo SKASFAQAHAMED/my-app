@@ -13,7 +13,7 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark")
-      document.body.style.background = "black"
+      document.body.style.background = "#282c34"
       showAlert("Dark Mode Enable", "success")
     } else {
       setMode("light")
@@ -34,19 +34,18 @@ function App() {
     <>
       {/* <BrowserRouter> */}
         <Navbar nav="Welcome" home="Helloooooooo" mode={mode} toggleMode={toggleMode} />
+        <Alert sendAlert={alert} />
 
         <div className="App">
           <header className="App-header">
             <div className="container">
 
-        <Alert sendAlert={alert} />
-        <TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />
+            <TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />
+              {/* <Routes>
+                <Route path="/About" element={<About  mode={mode} />}/>
+                <Route path="/" element={<TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />} />
 
-              {/* <Routes> */}
-                {/* <Route path="/About" element={<About />} /> */}
-                {/* <Route path="/" element={<TextForm heading="Your text is her" mode={mode} SendshowAlert={showAlert} />} /> */}
-
-              {/* </Routes> */}
+              </Routes> */}
 
             </div>
 

@@ -79,23 +79,24 @@ export default function TextForm(props) {
                     </div>
                 </form>
                 <button onClick={convertToUpper}
-                    className="btn btn-primary mx-2">Upper Case</button>
+                    className="btn btn-primary mx-2 my-2">Upper Case</button>
                 <button onClick={convertToLower}
-                    className="btn btn-primary mx-2">Lower Case</button>
+                    className="btn btn-primary mx-2 my-2">Lower Case</button>
                 <button onClick={clear}
-                    className="btn btn-primary mx-2">Clear</button>
+                    className="btn btn-primary mx-2 my-2">Clear</button>
                 <button onClick={toggleStyle}
-                    className="btn btn-primary mx-2">{btntext}</button>
+                    className="btn btn-primary mx-2 my-2">{btntext}</button>
                 <button onClick={handleCopy}
-                    className="btn btn-primary mx-2">Copy Text</button>
+                    className="btn btn-primary mx-2 my-2">Copy Text</button>
                 <button onClick={extraSpace}
-                    className="btn btn-primary mx-2">Remove Spaces</button>
+                    className="btn btn-primary mx-2 my-2">Remove Spaces</button>
             </div>
             <div className="container my-4">
                 <p className="fw-bold fst-italic" style={myStyle}>Your Text Summary</p>
                 {/* <h5>Total "{text.split(" ").length}" Words and "{text.length}" Characters</h5> */}
-                <p>{text.split(" ").length-1 } words and {text.length} characters</p>   {/*{1000-text.length-1} */}
-                <h5>{0.008 * text.split(" ").length} Minutes to read the text</h5>
+                {/* <h5>{text.split(" ").length-1 } words and {text.length} characters</h5>*/}  {/* {1000-text.length-1} */}
+                <p>{text.split(" ").filter((element)=>{return element.length !==0}).length} words and {text.length} characters</p>
+                <h5>{0.008 * text.split(" ").filter((element)=>{return element.length !==0}).length} Minutes to read the text</h5>
                 <h1 className="fw-bold fst-italic">Preview of the Text you Entered</h1>
                 <h5>{text.length>0?text:"Enter text above to Review"}</h5>
             </div>
